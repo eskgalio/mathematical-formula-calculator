@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math Tools: Equation Editor & Graphing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Math Tools</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Equation Editor</a></li>
+                <li><a href="#">Graphing Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="equation-editor-section">
+            <h2>Equation Editor</h2>
+            <textarea id="equation-input" rows="3" placeholder="Enter your equation using LaTeX (e.g., E=mc^2)"></textarea>
+            <button onclick="renderEquation()">Render Equation</button>
+            <div id="equation-output"></div>
+        </section>
+
+        <section id="graphing-calculator-section">
+            <h2>Graphing Calculator</h2>
+            <input type="text" id="function-input" placeholder="Enter function (e.g., x^2)">
+            <button onclick="plotGraph()">Plot Graph</button>
+            <div id="graph"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Math Tools. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
